@@ -12,8 +12,6 @@ $(document).ready(function(){
 	    stopOnHover : true
 	});
 
-	$("a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook', show_title: false, social_tools: ''});
-
 
 	$('h4.panel-title').click(function(){
 		var $i = $(this).find('i');

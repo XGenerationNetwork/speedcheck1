@@ -20,7 +20,7 @@
 	<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon.png">
 	<link rel="shortcut icon" href="images/favicon.png">
  -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="/javascript-network-speed-tester/bins/lib/bootstrap/css/bootstrap.min.css"/>
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/ico.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
@@ -45,7 +45,9 @@
 
 	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/uikit.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="/javascript-network-speed-tester/bins/lib/angular/angular.min.js"></script>
     <script type="text/javascript" src="/javascript-network-speed-tester/bins/wl-ng-network-speed-tester.min.js"></script>
     
@@ -68,7 +70,6 @@
 
 								<li><a href="#home"><i class="fa fa-home fa-fw"></i> <span>Home</span></a></li>
 								<li><a href="#features"><i class="fa fa-spinner fa-fw"></i> <span>Speed Check 1 Results</span></a></li>
-								<li><a href="#FAQ"><i class="fa fa-question-circle fa-fw"></i> <span>FAQ</span></a></li>
 
 							</ul>
 						</div>
@@ -112,7 +113,7 @@
 					<i class="fa fa-cogs fa-fw"></i>
 					<h2 data-uk-scrollspy="{cls:'fadeInOne', repeat: true}">Ultimate Compatibility</h2>
 					<p>
-					Speed Check will work on any device with JavaScript, making it perfect for checking your online network speeds for devices like the iPhone, XBox One, Playstation 4, Chromebook, Smart TV and more.
+					Speed Check will work on any device with JavaScript, making it perfect tool to test your online network speeds for devices like the iPhone, XBox One, Playstation 4, Chromebook, Smart TV and more.
 					</p>
 				</div><!--/single-feature-->
 
@@ -163,127 +164,12 @@
 		</div><!--/container-->
 	</div><!--/detailed-feature-->
 
-	<!--faq-->
-	<div class="wrapper faq-wrap" id="FAQ">
-		<div class="container">
-			<div class="row">
-				<div data-uk-scrollspy="{cls:'slideRight', repeat: true}" class="col-md-6 faq-image"><img  src="images/ipad-hand.png" alt=""></div>
-				<div class="col-md-6" data-uk-scrollspy="{cls:'slideLeft', repeat: true}">
-
-					<div class="faq-intro"><h2>Some <span>questions</span> in mind?</h2></div>
-					<div class="panel-group" id="faq">
-					  <div class="panel panel-faq">
-					    <div class="panel-heading">
-					      <h4 class="panel-title">
-					        <a data-toggle="collapse" data-parent="#faq" href="#collapseOne">
-					          <i class="fa fa-plus-square fa-minus-square fa-fw"></i>Collapsible Group Item?
-					        </a>
-					      </h4>
-					    </div>
-					    <div id="collapseOne" class="panel-collapse collapse in">
-					      <div class="panel-body">
-					        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					      </div>
-					    </div>
-					  </div><!--/panel panel-faq-->
-					  <div class="panel panel-faq">
-					    <div class="panel-heading">
-					      <h4 class="panel-title">
-					        <a data-toggle="collapse" data-parent="#faq" href="#collapseTwo">
-					          <i class="fa fa-plus-square fa-fw"></i>Anim pariatur cliche reprehenderit?
-					        </a>
-					      </h4>
-					    </div>
-					    <div id="collapseTwo" class="panel-collapse collapse">
-					      <div class="panel-body">
-					        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					      </div>
-					    </div>
-					  </div><!--/panel panel-faq-->
-					  <div class="panel panel-faq">
-					    <div class="panel-heading">
-					      <h4 class="panel-title">
-					        <a data-toggle="collapse" data-parent="#faq" href="#collapseThree">
-					          <i class="fa fa-plus-square fa-fw"></i>Eiusmod accusamus high life accusamus?
-					        </a>
-					      </h4>
-					    </div>
-					    <div id="collapseThree" class="panel-collapse collapse">
-					      <div class="panel-body">
-					        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					      </div>
-					    </div>
-					  </div><!--/panel panel-faq-->
-					  <div class="panel panel-faq">
-					    <div class="panel-heading">
-					      <h4 class="panel-title">
-					        <a data-toggle="collapse" data-parent="#faq" href="#collapseFour">
-					          <i class="fa fa-plus-square fa-fw"></i>High life accusamus terry richardson?
-					        </a>
-					      </h4>
-					    </div>
-					    <div id="collapseFour" class="panel-collapse collapse">
-					      <div class="panel-body">
-					        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					      </div>
-					    </div>
-					  </div><!--/panel panel-faq-->
-					</div><!--/faq-->
-
-				</div><!--/col-sm-6-->
-
-			</div><!--/row-->
-		</div><!--/container-->
-	</div><!--/faq-->
 
 	<!--footer-->
 	<div class="wrapper footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-6 copyright">Copyright &copy; 2018 Speed Test 1</div>
-				<div class="col-sm-6 social">
-					<a href="#">
-						<span class="fa-stack fa-lg">
-						  <i class="fa fa-circle fa-stack-2x rss"></i>
-						  <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-						</span>
-					</a>
-
-					<a href="#">
-						<span class="fa-stack fa-lg">
-						  <i class="fa fa-circle fa-stack-2x fb"></i>
-						  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-						</span>
-					</a>
-
-					<a href="#">
-						<span class="fa-stack fa-lg">
-						  <i class="fa fa-circle fa-stack-2x twitter"></i>
-						  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-						</span>
-					</a>
-
-					<a href="#">
-						<span class="fa-stack fa-lg">
-						  <i class="fa fa-circle fa-stack-2x google-plus"></i>
-						  <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
-						</span>
-					</a>
-
-					<a href="#">
-						<span class="fa-stack fa-lg">
-						  <i class="fa fa-circle fa-stack-2x pinterest"></i>
-						  <i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
-						</span>
-					</a>
-
-					<a href="#">
-						<span class="fa-stack fa-lg">
-						  <i class="fa fa-circle fa-stack-2x email"></i>
-						  <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-						</span>
-					</a>
-				</div>
+				<div class="col-sm-12 copyright">Copyright &copy; 2018 Speed Test 1</div>
 			</div><!--/row-->
 		</div><!--/container-->
 	</div><!--/footer-->
