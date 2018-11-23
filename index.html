@@ -25,6 +25,7 @@
 	<link rel="stylesheet" type="text/css" href="css/ico.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/colors/alizarin.css" id="theme-color-file">
 	<link rel="stylesheet" type="text/css" href="css/colors/color.css">
@@ -49,12 +50,11 @@
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/uikit.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
-	<script type="text/javascript" src="javascript-network-speed-tester/bins/lib/angular/angular.min.js"></script>
-    <script type="text/javascript" src="javascript-network-speed-tester/bins/wl-ng-network-speed-tester.js"></script>
-
-</head>
-
-<body>
+    <script type="text/javascript" src="/javascript-network-speed-tester/bins/lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/javascript-network-speed-tester/bins/wl-ng-network-speed-tester.min.js"></script>
+    
+	</head>
+	<body>
 
 	<!--header-->
 	<div class="wrapper header navbar navbar-inverse navbar-fixed-top">
@@ -158,31 +158,12 @@
 			</div><!--/row detailed-feature-->
 
 			<div class="row detailed-feature">
-				
-			<div class="col-sm-12">
-				<div ng-app="demo-app" ng-controller="demoAppController">
-				<div wl-ng-network-speed-tester
-					 auto-trigger="false"
-					 trigger-go="triggerGo"></div>
-				<button ng-click="start()">Start bandwidth test</button>
-				</div>
-				<script type="text/javascript">
-					//must set the bins url
-					angular.module('wl-ng-network-speed-tester').value('bins', '../bins');
-
-					//create an AngularJS module with a dependency to our bandwidth tester
-					var demoApp = angular.module('demo-app', ['wl-ng-network-speed-tester']);
-					//declare a controller
-					demoApp.controller('demoAppController', function($scope) {
-						$scope.triggerGo = false;   //initially set the trigger to false
-
-						//this function will start the tests by setting the triggerGo to true, triggerGo is binded to the trigger-go attribute of the directive
-						$scope.start = function() {
-							$scope.triggerGo = true;
-						}
-					});
-				</script>
-			</div><!--/row detailed-feature-->
+        <div ng-app="wl-ng-network-speed-tester" wl-ng-network-speed-tester></div>
+        <script type="text/javascript">
+            //must set the bins url
+            angular.module('wl-ng-network-speed-tester').value('bins', '/javascript-network-speed-tester/bins');
+        </script>
+					</div><!--/row detailed-feature-->
 		</div><!--/container-->
 	</div><!--/detailed-feature-->
 
@@ -325,4 +306,4 @@
 
 	
 </body>
-</html>	
+</html>
