@@ -1,0 +1,19 @@
+/*
+amethyst #9b59b6 #8e44ad
+*/
+
+a{color: #9b59b6;}
+a:hover{color: #8e44ad;}
+h2 span{color: #9b59b6;}
+.header{background-color: #9b59b6;}
+.logo a:hover{background-color: #8e44ad;}
+.nav > ul > li > a:hover{background-color: #8e44ad;}
+.slider{background-color: #8e44ad;}
+.store-button{background-color: #9b59b6;}
+.store-button:hover{background-color: rgba(0, 0, 0, 0.1);}
+.single-feature i , .single-feature h2 {color: #9b59b6;}
+.single-feature:nth-child(2){background-color: #9b59b6;}
+.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {background-color: #9b59b6;}
+.news-letter{background-color: #9b59b6;}
+.btn-color {background-color: #8e44ad;}
+.footer .fa-stack-2x{color: #9b59b6;}

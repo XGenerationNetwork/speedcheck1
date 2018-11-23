@@ -1,0 +1,18 @@
+1. Install Node.js
+We will not go into much details here, just visit the official Node.js website and download a suitable installer/package
+
+2. Install a HTTP server into Node.js
+There are plenty of HTTP servers among the Node Packaged Modules and we choose LocalServer.
+Type the following command into your system operating console (internet connection is required as the npm utility will download the server from the npm repository):
+	npm install -g localserver
+
+3. Run the LocalServer from within Node.js
+Now, that we have a HTTP server installed, it's time to run it and host our AngularJS network speed testing application. Just type localserver in the console:
+	localserver
+
+4. Run a sample application
+The AngularJS network testing package contains a sample directory located near the bins directory under the angularjs-network-speed-tester directory. 
+Run the sample.default.html application by typing http://localhost:9000/sample/sample.default.html into the address bar.
+
+Please checkout the official documentation for more details.
+Enjoy!

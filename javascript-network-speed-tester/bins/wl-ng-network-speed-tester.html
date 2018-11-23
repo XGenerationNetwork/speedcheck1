@@ -1,0 +1,116 @@
+<div>
+    <div class="panel panel-default" ng-show="showPing">
+        <div class="panel-heading">
+            <button class="btn btn-default" ng-click="ping(false)" ng-disabled="isOnAir()" ng-show="showRefreshButton">
+                <span class="glyphicon glyphicon-refresh" ng-hide="vm.pingActive"></span>
+                <img class="" ng-show="vm.pingActive" ng-src="{{vm.loaderImg}}"/>
+            </button>
+            <span class="panel-title">{{localePing}}</span>
+        </div>
+        <div class="panel-body">
+            <div class="progress" ng-show="vm.pingActive" style="margin-bottom: 1px;">
+                <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar"
+                     aria-valuemin="0"
+                     aria-valuemax="100"
+                     aria-valuenow="{{vm.pingIteration}}"
+                     ng-style="pingStyle()">
+                    <label class="text-muted pull-left">&nbsp;{{vm.pingInstantTime}}&nbsp;{{localeSeconds}}</label>
+                </div>
+            </div>
+            <div ng-hide="vm.pingActive">
+                {{vm.pingTime}} {{localeSeconds}}
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default" ng-show="showDownload">
+        <div class="panel-heading">
+            <button class="btn btn-default" ng-click="download(false)" ng-disabled="isOnAir()" ng-show="showRefreshButton">
+                <span class="glyphicon glyphicon-refresh" ng-hide="vm.downloadActive"></span>
+                <img class="" ng-show="vm.downloadActive" ng-src="{{vm.loaderImg}}"/>
+            </button>
+            <span class="panel-title">{{localeDownload}}</span>
+        </div>
+        <div class="panel-body">
+            <div class="progress">
+                <div ng-class="['progress-bar', 'progress-bar-warning', vm.downloadActive ? 'progress-bar-striped active' : '']" role="progressbar"
+                     aria-valuemin="0"
+                     aria-valuemax="100"
+                     aria-valuenow="{{downloadStyle()}}"
+                     ng-style="downloadStyle()">
+                    <label class="text-muted pull-left" ng-show="vm.downloadActive">
+                        &nbsp;{{vm.downloadInstantSpeed | wlNgNSTUnitConverter:speedMeasureUnit}}&nbsp;{{speedMeasureUnit}}
+                    </label>
+                    <label class="text-muted" ng-hide="vm.downloadActive">
+                        {{localeYou}}&nbsp;{{vm.downloadSpeed | wlNgNSTUnitConverter:speedMeasureUnit}}&nbsp;{{speedMeasureUnit}}
+                    </label>
+                </div>
+            </div>
+            <div ng-repeat="comparison in comparisons" ng-show="showComparison">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info" role="progressbar"
+                         aria-valuemin="0"
+                         aria-valuemax="100"
+                         aria-valuenow="{{percent(comparison.downloadValue)}}"
+                         ng-style="comparisonStyle(comparison.downloadValue)">
+                        <div class="text-muted">{{comparison.type}}&nbsp;{{comparison.downloadValue | wlNgNSTUnitConverter:speedMeasureUnit}}&nbsp;{{speedMeasureUnit}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default" ng-show="showUpload">
+        <div class="panel-heading">
+            <button class="btn btn-default" ng-click="upload()" ng-disabled="isOnAir()" ng-show="showRefreshButton">
+                <span class="glyphicon glyphicon-refresh" ng-hide="vm.uploadActive"></span>
+                <img class="" ng-show="vm.uploadActive" ng-src="{{vm.loaderImg}}"/>
+            </button>
+            <span class="panel-title">{{localeUpload}}</span>
+        </div>
+        <div class="panel-body">
+            <div class="progress">
+                <div ng-class="['progress-bar', 'progress-bar-warning', vm.uploadActive ? 'progress-bar-striped active' : '']" role="progressbar"
+                     aria-valuemin="0"
+                     aria-valuemax="100"
+                     aria-valuenow="{{uploadStyle()}}"
+                     ng-style="uploadStyle()">
+                    <label class="text-muted pull-left" ng-show="vm.uploadActive">
+                        &nbsp;{{vm.uploadInstantSpeed | wlNgNSTUnitConverter:speedMeasureUnit}}&nbsp;{{speedMeasureUnit}}
+                    </label>
+                    <label class="text-muted" ng-hide="vm.uploadActive">
+                        {{localeYou}}&nbsp;{{vm.uploadSpeed | wlNgNSTUnitConverter:speedMeasureUnit}}&nbsp;{{speedMeasureUnit}}
+                    </label>
+                </div>
+            </div>
+            <div class="progress" ng-repeat="comparison in comparisons" ng-show="showComparison">
+                <div class="progress-bar progress-bar-info" role="progressbar"
+                     aria-valuemin="0"
+                     aria-valuemax="100"
+                     aria-valuenow="{{percent(comparison.uploadValue)}}"
+                     ng-style="comparisonStyle(comparison.uploadValue)">
+                    <span class="text-muted">{{comparison.type}}&nbsp;{{comparison.uploadValue | wlNgNSTUnitConverter:speedMeasureUnit}}&nbsp;{{speedMeasureUnit}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default" ng-show="showCost">
+        <div class="panel-heading">
+            <span class="panel-title">{{localeCost}}</span>
+        </div>
+        <div class="panel-body">
+            <div>
+                <span>{{localeUnitCost}}: </span>
+                <span>{{unitCostPerByte | wlNgNSTCostConverter:speedMeasureUnit}} {{localeCurrency}} / {{speedMeasureUnit.replace('ps','')}}</span>
+            </div>
+            <div>
+                <span>{{localeTotalCost}}: </span>
+                <span ng-show="vm.downloadActive">{{(unitCostPerByte * vm.downloadInstantSpeed).toFixed(2)}}</span>
+                <span ng-hide="vm.downloadActive">{{(unitCostPerByte * vm.downloadSpeed).toFixed(2)}}</span>
+                <span> {{localeCurrency}} / {{localeBillingPeriod}}</span>
+            </div>
+        </div>
+    </div>
+
+
+</div>

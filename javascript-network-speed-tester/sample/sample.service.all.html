@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../bins/lib/bootstrap/css/bootstrap.min.css"/>
+        <script type="text/javascript" src="../bins/lib/angular/angular.min.js"></script>
+        <script type="text/javascript" src="../bins/wl-ng-network-speed-tester.js"></script>
+    </head>
+    <body style="margin: 15px;">
+        <div class="well well-sm" ng-app="demo-app" ng-controller="demoAppController">
+            <div><b>Ping time:</b> {{pingTime}} seconds</div>
+            <div><b>Download info:</b> {{downloadData}}</div>
+            <div><b>Upload info:</b> {{uploadData}}</div>
+            <br/>
+            <button class="btn btn-default" ng-click="refresh()"><span class="glyphicon glyphicon-refresh"></span> Refresh</button>
+        </div>
+        <script type="text/javascript">
+            //must set the bins url
+            angular.module('wl-ng-network-speed-tester').value('bins', '../bins');
+
+            //create an AngularJS module with a dependency to our bandwidth tester
+            var demoApp = angular.module('demo-app', ['wl-ng-network-speed-tester']);
+            //declare a controller with a dependency on network speed services
+            demoApp.controller('demoAppController', function($scope, wlNgNSTService, wlNgNSTDataGenerator) {
+
+                //initialize the scope
+                $scope.pingTime = 0;
+                $scope.downloadData = {};
+                $scope.uploadData = {};
+
+                //generate 1Mb of data to upload
+                var uploadData = wlNgNSTDataGenerator.generate(102400);
+
+                //refresh will be called from UI
+                $scope.refresh = function() {
+
+                    wlNgNSTService.ping()
+                            .then(function(pingTime) {
+                                $scope.pingTime = pingTime;
+                            }, function(error) {
+                                $scope.pingTime = 0;
+                            });
+
+                    wlNgNSTService.download()
+                            .then(function(ret) {
+                                $scope.downloadData = ret;
+                            }, function(error) {
+                                $scope.downloadData = {};
+                            });
+
+                    wlNgNSTService.upload(uploadData)
+                            .then(function(ret) {
+                                $scope.uploadData = ret;
+                            }, function(error) {
+                                $scope.uploadData = {};
+                            });
+                };
+
+                $scope.refresh();
+            });
+        </script>    </body>
+</html>

@@ -1,0 +1,19 @@
+/*
+Emerald #2ECC71 #27AE60
+*/
+
+a{color: #2ECC71;}
+a:hover{color: #27AE60;}
+h2 span{color: #2ECC71;}
+.header{background-color: #2ECC71;}
+.logo a:hover{background-color: #27AE60;}
+.nav > ul > li > a:hover{background-color: #27AE60;}
+.slider{background-color: #27AE60;}
+.store-button{background-color: #2ECC71;}
+.store-button:hover{background-color: rgba(0, 0, 0, 0.1);}
+.single-feature i , .single-feature h2 {color: #2ECC71;}
+.single-feature:nth-child(2){background-color: #2ECC71;}
+.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {background-color: #2ECC71;}
+.news-letter{background-color: #2ECC71;}
+.btn-color {background-color: #27AE60;}
+.footer .fa-stack-2x{color: #2ECC71;}

@@ -1,0 +1,19 @@
+/*
+Carrot #e67e22 #d35400
+*/
+
+a{color: #e67e22;}
+a:hover{color: #d35400;}
+h2 span{color: #e67e22;}
+.header{background-color: #e67e22;}
+.logo a:hover{background-color: #d35400;}
+.nav > ul > li > a:hover{background-color: #d35400;}
+.slider{background-color: #d35400;}
+.store-button{background-color: #e67e22;}
+.store-button:hover{background-color: rgba(0, 0, 0, 0.1);}
+.single-feature i , .single-feature h2 {color: #e67e22;}
+.single-feature:nth-child(2){background-color: #e67e22;}
+.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {background-color: #e67e22;}
+.news-letter{background-color: #e67e22;}
+.btn-color {background-color: #d35400;}
+.footer .fa-stack-2x{color: #e67e22;}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="demo-app" ng-controller="demoAppController">
+    <head>
+        <script type="text/javascript" src="../bins/lib/angular/angular.min.js"></script>
+        <script type="text/javascript" src="../bins/wl-ng-network-speed-tester.js"></script>
+        <script type="text/javascript">
+            //must set the bins url
+            angular.module('wl-ng-network-speed-tester').value('bins', '../bins');
+
+            //create an AngularJS module with a dependency to our bandwidth tester
+            var demoApp = angular.module('demo-app', ['wl-ng-network-speed-tester']);
+            //declare a controller with a dependency on network speed tester service (wlNgNSTService)
+            demoApp.controller('demoAppController', function(wlNgNSTService) {
+                //call the ping method of the service
+                wlNgNSTService.ping()
+                        .then(function(pingTime) {
+                            //on success display the ping time
+                            alert('Ping time: ' + pingTime + ' seconds');
+                        }, function(error) {
+                            //on error ...
+                            alert('Oops!');
+                        });
+            });
+        </script>
+    </head>
+</html>

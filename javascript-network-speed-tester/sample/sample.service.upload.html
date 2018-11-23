@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="demo-app" ng-controller="demoAppController">
+    <head>
+        <script type="text/javascript" src="../bins/lib/angular/angular.min.js"></script>
+        <script type="text/javascript" src="../bins/wl-ng-network-speed-tester.js"></script>
+        <script type="text/javascript">
+            //must set the bins url
+            angular.module('wl-ng-network-speed-tester').value('bins', '../bins');
+
+            //create an AngularJS module with a dependency to our bandwidth tester
+            var demoApp = angular.module('demo-app', ['wl-ng-network-speed-tester']);
+            //declare a controller with a dependency on network speed tester service (wlNgNSTService) and data generator (wlNgNSTDataGenerator)
+            demoApp.controller('demoAppController', function(wlNgNSTService, wlNgNSTDataGenerator) {
+
+                //generate 1Mb of data to upload
+                var uploadData = wlNgNSTDataGenerator.generate(102400);
+
+                //call the upload method of the service
+                wlNgNSTService.upload(uploadData)
+                        .then(function(data) {
+                            //on success display the download payload size, time and speed
+                            alert('Payload: ' + data.size + ' bytes\n' + 'Time: ' + data.time + ' seconds\n' + 'Speed: ' + data.speed + ' bps');
+                        }, function(error) {
+                            //on error ...
+                            alert('Oops!');
+                        });
+            });
+        </script>
+    </head>
+</html>

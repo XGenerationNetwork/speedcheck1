@@ -1,0 +1,19 @@
+/*
+wet-asphalt #34495E #2C3E50
+*/
+
+a{color: #34495E;}
+a:hover{color: #2C3E50;}
+h2 span{color: #34495E;}
+.header{background-color: #34495E;}
+.logo a:hover{background-color: #2C3E50;}
+.nav > ul > li > a:hover{background-color: #2C3E50;}
+.slider{background-color: #2C3E50;}
+.store-button{background-color: #34495E;}
+.store-button:hover{background-color: rgba(0, 0, 0, 0.1);}
+.single-feature i , .single-feature h2 {color: #34495E;}
+.single-feature:nth-child(2){background-color: #34495E;}
+.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {background-color: #34495E;}
+.news-letter{background-color: #34495E;}
+.btn-color {background-color: #2C3E50;}
+.footer .fa-stack-2x{color: #34495E;}

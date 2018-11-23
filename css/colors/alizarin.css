@@ -1,0 +1,19 @@
+/*
+Alizarin #E74C3C #C0392B
+*/
+
+a{color: #E74C3C;}
+a:hover{color: #C0392B;}
+h2 span{color: #E74C3C;}
+.header{background-color: #E74C3C;}
+.logo a:hover{background-color: #C0392B;}
+.nav > ul > li > a:hover{background-color: #C0392B;}
+.slider{background-color: #C0392B;}
+.store-button{background-color: #E74C3C;}
+.store-button:hover{background-color: rgba(0, 0, 0, 0.1);}
+.single-feature i , .single-feature h2 {color: #E74C3C;}
+.single-feature:nth-child(2){background-color: #E74C3C;}
+.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {background-color: #E74C3C;}
+.news-letter{background-color: #E74C3C;}
+.btn-color {background-color: #C0392B;}
+.footer .fa-stack-2x{color: #E74C3C;}

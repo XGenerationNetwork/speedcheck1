@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../bins/lib/bootstrap/css/bootstrap.min.css"/>
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <script type="text/javascript" src="../bins/lib/angular/angular.min.js"></script>
+        <script type="text/javascript" src="../bins/wl-ng-network-speed-tester.js"></script>
+    </head>
+    <body>
+        <div ng-app="wl-ng-network-speed-tester" wl-ng-network-speed-tester
+             id="speed-tester"
+             auto-trigger="false"></div>
+        <button id="start-button">Start bandwidth test</button>
+        <script type="text/javascript">
+            //must set the bins url
+            angular.module('wl-ng-network-speed-tester').value('bins', '../bins');
+
+            $('#start-button').click(function() {
+                //get the directive scope
+                var speedTesterScope = angular.element($('#speed-tester')).scope().$$childTail;
+                //start the tests
+                speedTesterScope.go();
+            });
+        </script>
+    </body>
+</html>

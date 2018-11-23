@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../bins/lib/bootstrap/css/bootstrap.min.css"/>
+        <script type="text/javascript" src="../bins/lib/angular/angular.min.js"></script>
+        <script type="text/javascript" src="../bins/wl-ng-network-speed-tester.js"></script>
+    </head>
+    <body>
+        <div ng-app="wl-ng-network-speed-tester" wl-ng-network-speed-tester
+             locale-seconds="sec"
+             locale-you="Your speed"
+             locale-ping="Ping time"
+             locale-download="Download speed"
+             locale-upload="Upload speed"
+             locale-cost="Estimative internet cost"
+             locale-currency="Euro"></div>
+        <script type="text/javascript">
+            //must set the bins url
+            angular.module('wl-ng-network-speed-tester').value('bins', '../bins');
+        </script>
+    </body>
+</html>

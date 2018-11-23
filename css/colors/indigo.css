@@ -1,0 +1,19 @@
+/*
+Indigo #1FB4DA #1a99ba
+*/
+
+a{color: #1FB4DA;}
+a:hover{color: #1a99ba;}
+h2 span{color: #1FB4DA;}
+.header{background-color: #1FB4DA;}
+.logo a:hover{background-color: #1a99ba;}
+.nav > ul > li > a:hover{background-color: #1a99ba;}
+.slider{background-color: #1a99ba;}
+.store-button{background-color: #1FB4DA;}
+.store-button:hover{background-color: rgba(0, 0, 0, 0.1);}
+.single-feature i , .single-feature h2 {color: #1FB4DA;}
+.single-feature:nth-child(2){background-color: #1FB4DA;}
+.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {background-color: #1FB4DA;}
+.news-letter{background-color: #1FB4DA;}
+.btn-color {background-color: #1a99ba;}
+.footer .fa-stack-2x{color: #1FB4DA;}

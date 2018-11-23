@@ -1,0 +1,19 @@
+/*
+Grean sea #1ABC9C #16A085
+*/
+
+a{color: #1ABC9C;}
+a:hover{color: #16A085;}
+h2 span{color: #1ABC9C;}
+.header{background-color: #1ABC9C;}
+.logo a:hover{background-color: #16A085;}
+.nav > ul > li > a:hover{background-color: #16A085;}
+.slider{background-color: #16A085;}
+.store-button{background-color: #1ABC9C;}
+.store-button:hover{background-color: rgba(0, 0, 0, 0.1);}
+.single-feature i , .single-feature h2 {color: #1ABC9C;}
+.single-feature:nth-child(2){background-color: #1ABC9C;}
+.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {background-color: #1ABC9C;}
+.news-letter{background-color: #1ABC9C;}
+.btn-color {background-color: #16A085;}
+.footer .fa-stack-2x{color: #1ABC9C;}

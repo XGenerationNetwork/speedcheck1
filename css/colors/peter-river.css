@@ -1,0 +1,19 @@
+/*
+peter-river #3799db #2980b9
+*/
+
+a{color: #3799db;}
+a:hover{color: #2980b9;}
+h2 span{color: #3799db;}
+.header{background-color: #3799db;}
+.logo a:hover{background-color: #2980b9;}
+.nav > ul > li > a:hover{background-color: #2980b9;}
+.slider{background-color: #2980b9;}
+.store-button{background-color: #3799db;}
+.store-button:hover{background-color: rgba(0, 0, 0, 0.1);}
+.single-feature i , .single-feature h2 {color: #3799db;}
+.single-feature:nth-child(2){background-color: #3799db;}
+.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {background-color: #3799db;}
+.news-letter{background-color: #3799db;}
+.btn-color {background-color: #2980b9;}
+.footer .fa-stack-2x{color: #3799db;}

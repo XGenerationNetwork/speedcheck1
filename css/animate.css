@@ -1,0 +1,383 @@
+/*
+==============================================
+CSS3 ANIMATION CHEAT SHEET
+==============================================
+
+Made by Justin Aguilar
+
+www.justinaguilar.com/animations/
+[Original Version]
+
+Questions, comments, concerns, love letters:
+justin@justinaguilar.com
+
+Modified by TechnextTeam
+==============================================
+*/
+
+/*
+==============================================
+slideDown
+==============================================
+*/
+
+
+
+.slideDown{ 
+	animation-name: slideDown;
+	-webkit-animation-name: slideDown;	
+
+	animation-duration: 0.5s;	
+	-webkit-animation-duration: 0.5s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+	
+	z-index:5;
+
+	visibility: visible !important;						
+}
+
+@keyframes slideDown {
+	0% {transform: translateY(-20px);}
+	100% {transform: translateY(0%);}		
+}
+
+@-webkit-keyframes slideDown {
+	0% {-webkit-transform: translateY(-20px);}
+	100% {-webkit-transform: translateY(0%);}	
+}
+
+
+
+.slideDownOne{
+	animation-name: slideDownOne;
+	-webkit-animation-name: slideDownOne;	
+
+	animation-duration: 1.5s;	
+	-webkit-animation-duration: 1.5s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+	
+	z-index:4;
+
+	visibility: visible !important;						
+}
+
+@keyframes slideDownOne {
+	0% {transform: translateY(-300px);}
+	100% {transform: translateY(0%);}		
+}
+
+@-webkit-keyframes slideDownOne {
+	0% {-webkit-transform: translateY(-300px);}
+	100% {-webkit-transform: translateY(0%);}	
+}
+
+
+
+.slideDownTwo{
+	animation-name: slideDownTwo;
+	-webkit-animation-name: slideDownTwo;	
+
+	animation-duration: 2s;	
+	-webkit-animation-duration: 2s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+	
+	z-index:3;
+
+	visibility: visible !important;						
+}
+
+@keyframes slideDownTwo {
+	0% {transform: translateY(-350px);}
+	100% {transform: translateY(0%);}		
+}
+
+@-webkit-keyframes slideDownTwo {
+	0% {-webkit-transform: translateY(-350px);}
+	100% {-webkit-transform: translateY(0%);}	
+}
+
+/*
+==============================================
+slideLeft
+==============================================
+*/
+
+
+.slideLeft{
+	animation-name: slideLeft;
+	-webkit-animation-name: slideLeft;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;	
+}
+
+@keyframes slideLeft {
+	0% {transform: translateX(25%);} 
+	100% {transform: translateX(0%);}
+}
+
+@-webkit-keyframes slideLeft {
+	0% {-webkit-transform: translateX(25%);}
+	100% {-webkit-transform: translateX(0%);}
+}
+
+/*
+==============================================
+slideRight
+==============================================
+*/
+
+
+.slideRight{
+	animation-name: slideRight;
+	-webkit-animation-name: slideRight;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;	
+}
+
+@keyframes slideRight {
+	0% {transform: translateX(-25%);}
+	100% {transform: translateX(0%);}
+}
+
+@-webkit-keyframes slideRight {
+	0% {-webkit-transform: translateX(-25%);}
+	100% {-webkit-transform: translateX(0%);}
+}
+
+
+
+/*
+==============================================
+fadeIn
+==============================================
+*/
+
+.fadeIn{
+	animation-name: fadeIn;
+	-webkit-animation-name: fadeIn;	
+
+	animation-duration: 0.5s;	
+	-webkit-animation-duration: 0.5s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;	
+}
+
+@keyframes fadeIn {
+	0% {transform: scale(0); opacity: 0.0;}
+	100% {transform: scale(1);opacity: 1;}		
+}
+
+@-webkit-keyframes fadeIn {
+	0% {-webkit-transform: scale(0); opacity: 0.0;}
+	100% {-webkit-transform: scale(1); opacity: 1;}		
+}
+
+
+.fadeInOne{
+	animation-name: fadeInOne;
+	-webkit-animation-name: fadeInOne;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;	
+
+	visibility: visible !important;	
+}
+
+@keyframes fadeInOne {
+	0% {transform: scale(0); opacity: 0.0;}
+	100% {transform: scale(1);opacity: 1;}		
+}
+
+@-webkit-keyframes fadeInOne {
+	0% {-webkit-transform: scale(0); opacity: 0.0;}
+	100% {-webkit-transform: scale(1); opacity: 1;}		
+}
+
+
+
+.fadeInTwo{
+	animation-name: fadeInTwo;
+	-webkit-animation-name: fadeInTwo;	
+
+	animation-duration: 1.5s;	
+	-webkit-animation-duration: 1.5s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;	
+
+	visibility: visible !important;	
+}
+
+@keyframes fadeInTwo {
+	0% {transform: scale(0); opacity: 0.0;}
+	100% {transform: scale(1);opacity: 1;}		
+}
+
+@-webkit-keyframes fadeInTwo {
+	0% {-webkit-transform: scale(0); opacity: 0.0;}
+	100% {-webkit-transform: scale(1); opacity: 1;}		
+}
+
+
+
+/*
+==============================================
+pullUp
+==============================================
+*/
+
+.pullUp{
+	animation-name: pullUp;
+	-webkit-animation-name: pullUp;	
+
+	animation-duration: 1.1s;	
+	-webkit-animation-duration: 1.1s;
+
+	animation-timing-function: ease-out;	
+	-webkit-animation-timing-function: ease-out;	
+
+	transform-origin: 50% 100%;
+	-ms-transform-origin: 50% 100%;
+	-webkit-transform-origin: 50% 100%; 		
+}
+
+@keyframes pullUp {
+	0% {
+		transform: scaleY(0.1);
+	}
+	40% {
+		transform: scaleY(1.02);
+	}
+	60% {
+		transform: scaleY(0.98);
+	}
+	80% {
+		transform: scaleY(1.01);
+	}
+	100% {
+		transform: scaleY(0.98);
+	}				
+	80% {
+		transform: scaleY(1.01);
+	}
+	100% {
+		transform: scaleY(1);
+	}							
+}
+
+@-webkit-keyframes pullUp {
+	0% {
+		-webkit-transform: scaleY(0.1);
+	}
+	40% {
+		-webkit-transform: scaleY(1.02);
+	}
+	60% {
+		-webkit-transform: scaleY(0.98);
+	}
+	80% {
+		-webkit-transform: scaleY(1.01);
+	}
+	100% {
+		-webkit-transform: scaleY(0.98);
+	}				
+	80% {
+		-webkit-transform: scaleY(1.01);
+	}
+	100% {
+		-webkit-transform: scaleY(1);
+	}		
+}
+
+/*
+==============================================
+pullDown
+==============================================
+*/
+
+.pullDown{
+	animation-name: pullDown;
+	-webkit-animation-name: pullDown;	
+
+	animation-duration: 1.1s;	
+	-webkit-animation-duration: 1.1s;
+
+	animation-timing-function: ease-out;	
+	-webkit-animation-timing-function: ease-out;	
+
+	transform-origin: 50% 0%;
+	-ms-transform-origin: 50% 0%;
+	-webkit-transform-origin: 50% 0%; 		
+}
+
+@keyframes pullDown {
+	0% {
+		transform: scaleY(0.1);
+	}
+	40% {
+		transform: scaleY(1.02);
+	}
+	60% {
+		transform: scaleY(0.98);
+	}
+	80% {
+		transform: scaleY(1.01);
+	}
+	100% {
+		transform: scaleY(0.98);
+	}				
+	80% {
+		transform: scaleY(1.01);
+	}
+	100% {
+		transform: scaleY(1);
+	}							
+}
+
+@-webkit-keyframes pullDown {
+	0% {
+		-webkit-transform: scaleY(0.1);
+	}
+	40% {
+		-webkit-transform: scaleY(1.02);
+	}
+	60% {
+		-webkit-transform: scaleY(0.98);
+	}
+	80% {
+		-webkit-transform: scaleY(1.01);
+	}
+	100% {
+		-webkit-transform: scaleY(0.98);
+	}				
+	80% {
+		-webkit-transform: scaleY(1.01);
+	}
+	100% {
+		-webkit-transform: scaleY(1);
+	}		
+}
