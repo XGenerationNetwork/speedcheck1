@@ -254,6 +254,10 @@
 	.detailed-feature p {
 	    padding-right: 50px;
 	}
+	#features	{
+		min-height:1500px;
+		overflow: hidden;
+	}
 
 /*----------------------------------*/
 /*------------ GALLARY -------------*/
